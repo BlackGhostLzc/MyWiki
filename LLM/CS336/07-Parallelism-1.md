@@ -125,7 +125,7 @@ ZeRO Stage 3 的每个 GPU 仍然在独立的 mini-batch 上独立地进行完�
 
 在一个大模型中，大部分计算都是矩阵乘法，张量并行的思想就是只并行化矩阵乘法，将一个大的矩阵乘法分解为一组可以相乘的子矩阵。所以pipeline parallel是沿着模型深度的并行，而tensor parallel是沿着模型宽度维度进行切分。
 
-<img src="./img/TensorParallel-1.jpg" style="zoom:25%;" />
+<img src="./img/TensorParallel-1.jpg" style="zoom:55%;" />
 
 让GPU处理一个不同的子矩阵，然后根据需要进行集体通信来同步计算出来的激活值。
 
